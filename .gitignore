@@ -1,0 +1,30 @@
+# --- OSによる不要ファイル ---
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# --- Visual Studio ---
+.vs/
+*.VC.db
+*.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- コンパイル生成物 ---
+/bin/
+/obj/
+/dll/
+*.exe
+*.app
+*.out
+*.ilk
+*.log
+*.pdb
+*.idb
+
+# --- Makefile関連（生成されたもの） ---
+*.make
+Makefile
+*.n*
