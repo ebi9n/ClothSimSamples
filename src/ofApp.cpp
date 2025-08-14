@@ -11,7 +11,6 @@ void ofApp::setup() {
     gui.setup("PBD Settings");
     gui.add(fFramePerSecond.set("FramePerSecond", 60.f, 12.f, 120.f));
     gui.add(iterations.set("Iterations", 10, 1, 20));
-    gui.add(showGui.set("Show GUI", true));
     gui.add(m_fSpringConstant.set("Spring Const.", 0.5f,0.f,1.5f));
     gui.add(m_nIterNum.set("PBD Iter Num.", 10, 1, 100));
     gui.add(m_fDampingCoef.set("Damping Coef.", 0.001f, 0.0f, 1.f));
@@ -31,8 +30,8 @@ void ofApp::update() {
         
         static float count = 0;
         count += 2.f / fFramePerSecond;
-        m_vOrigin.x = 500.f + 50.f * sinf(2 *count);
-        m_vOrigin.y = 100.f + 50.f * cosf(1.f / 2.f * count);
+        m_vOrigin.x = 500.f + 50.f * sinf(count);
+        m_vOrigin.y = 100.f + 50.f * cosf(count);
 
         m_pPBDSwingObject->SetParentNowPos(m_vOrigin);
 
