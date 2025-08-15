@@ -40,6 +40,9 @@
     <ClCompile Include="src\2DSwingObject.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Scene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="addons">
@@ -99,6 +102,9 @@
       <Filter>header</Filter>
     </ClInclude>
     <ClInclude Include="src\2DSwingObject.h">
+      <Filter>header</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene.h">
       <Filter>header</Filter>
     </ClInclude>
   </ItemGroup>

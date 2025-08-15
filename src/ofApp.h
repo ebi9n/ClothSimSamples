@@ -1,6 +1,7 @@
 #pragma once
 #include "ofMain.h"
 #include "ofxGui.h"
+#include "Scene.h"
 #include "2DSwingObject.h"
 #include <memory>
 
@@ -9,6 +10,7 @@ public:
     void setup();
     void update();
     void draw();
+    void keyPressed(int key) override;
 
     // GUI
     ofxPanel gui;
@@ -23,6 +25,11 @@ public:
     void InitSample2DSwingObject();
 
 private: 
+    std::shared_ptr<CScene> m_pCurrentScene;
+    std::shared_ptr<CMenuScene> m_pMenuScene;
+    std::shared_ptr<CPBDSimpleScene> m_pPBDSimpleScene;
     std::shared_ptr<CPBD2DSwingObject> m_pPBDSwingObject;
     ofVec2f m_vOrigin;
+
+
 };
