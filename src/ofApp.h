@@ -18,7 +18,7 @@ public:
     ofParameter<float> m_fDampingCoef;
     ofParameter<int> iterations;
     ofParameter<bool> showGui;
-    ofParameter<E_SAMPLE_PATTERN> eSampleType;
+    ofParameter<E_SAMPLE_PATTERN> m_eSampleType;
     ofParameter<float> m_fSpringConstant;
     ofParameter<unsigned int> m_nIterNum;
 

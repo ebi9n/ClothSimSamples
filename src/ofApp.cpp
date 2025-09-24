@@ -1,36 +1,21 @@
 #include "ofApp.h"
 
 void ofApp::setup() {
-
+    ofSetFrameRate(60);
     m_pMenuScene = std::make_shared<CMenuScene>();
 
     // コールバックを登録.
     m_pMenuScene->OnSelectSample = [this](E_SAMPLE_SCENE eSampleScene) {
         if (eSampleScene == E_SAMPLE_SCENE::E_SAMPLE_SCENE_PBD_SIMPLE) {
             m_pCurrentScene = m_pPBDSimpleScene;
+            
         }
+
+        m_pCurrentScene->SetUp();
     };
 
     m_pPBDSimpleScene = std::make_shared<CPBDSimpleScene>();
-
     m_pCurrentScene = m_pMenuScene;
-
-    //ofSetFrameRate(60);
-
-    //// サンプルパターンを0にセット.
-    //eSampleType.set(E_SAMPLE_PATTERN::E_SAMPLE_PATTERN_SIMPLE);
-    //InitSample2DSwingObject();
-
-    //// GUI初期化
-    //gui.setup("PBD Settings");
-    //gui.add(fFramePerSecond.set("FramePerSecond", 60.f, 12.f, 120.f));
-    //gui.add(iterations.set("Iterations", 10, 1, 20));
-    //gui.add(m_fSpringConstant.set("Spring Const.", 0.5f,0.f,1.5f));
-    //gui.add(m_nIterNum.set("PBD Iter Num.", 10, 1, 100));
-    //gui.add(m_fDampingCoef.set("Damping Coef.", 0.001f, 0.0f, 1.f));
-
-    //m_vOrigin.set(ofVec2f(500.f, 150.f));
-
 }
 
 void ofApp::update() {
