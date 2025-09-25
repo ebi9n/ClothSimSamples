@@ -239,6 +239,7 @@
     <ClCompile Include="..\..\..\Users\shrim\OneDrive\デスクトップ\clothsim\of_v0.12.1_vs_64_release\addons\ofxGui\src\ofxSlider.cpp" />
     <ClCompile Include="..\..\..\Users\shrim\OneDrive\デスクトップ\clothsim\of_v0.12.1_vs_64_release\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\Users\shrim\OneDrive\デスクトップ\clothsim\of_v0.12.1_vs_64_release\addons\ofxGui\src\ofxToggle.cpp" />
+    <ClCompile Include="src\Scene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\2DSwingObject.h" />
@@ -255,6 +256,7 @@
     <ClInclude Include="..\..\..\Users\shrim\OneDrive\デスクトップ\clothsim\of_v0.12.1_vs_64_release\addons\ofxGui\src\ofxSlider.h" />
     <ClInclude Include="..\..\..\Users\shrim\OneDrive\デスクトップ\clothsim\of_v0.12.1_vs_64_release\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\Users\shrim\OneDrive\デスクトップ\clothsim\of_v0.12.1_vs_64_release\addons\ofxGui\src\ofxToggle.h" />
+    <ClInclude Include="src\Scene.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">

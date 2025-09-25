@@ -1,5 +1,11 @@
 #include "2DSwingObject.h"
 
+// 定数群の宣言.
+float CPBD2DSwingObject::s_fGravity = 980.f;
+float CPBD2DSwingObject::s_fDistanceUnit = 15.f;
+float CPBD2DSwingObject::s_fMass = 1.f;
+float CPBD2DSwingObject::s_fSpringConstraint = 0.5f;
+unsigned int CPBD2DSwingObject::s_nIterNum = 10;
 // コンストラクタ.
 S_DISTANCE_CONSTRAINT::S_DISTANCE_CONSTRAINT(S_SWING_CONTROL_POINT* _pCtrl1, S_SWING_CONTROL_POINT* _pCtrl2, float _fConstraitLength, float _fSpringConstraint)
 	: pCtrl1(_pCtrl1)
@@ -13,11 +19,7 @@ S_SWING_PARENT_INFO::S_SWING_PARENT_INFO()
 	, vPrevWorldPos(ofVec2f(0.f, 0.f))
 {}
 
-float CPBD2DSwingObject::s_fGravity = 98.f;
-float CPBD2DSwingObject::s_fDistanceUnit = 15.f;
-float CPBD2DSwingObject::s_fMass = 1.f;
-float CPBD2DSwingObject::s_fSpringConstraint = 0.5f;
-unsigned int CPBD2DSwingObject::s_nIterNum = 10;
+
 // コンストラクタ.
 CPBD2DSwingObject::CPBD2DSwingObject()
 	: m_sDistConstraintVector()
